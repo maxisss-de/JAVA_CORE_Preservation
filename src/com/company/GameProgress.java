@@ -6,7 +6,7 @@ public class GameProgress implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private int health;         // Здоровье
-    private int weapons;        // Оружие
+    private int weapons;        // Оружия
     private int lvl;            // Уровень
     private double distance;    // Расстояние
 
