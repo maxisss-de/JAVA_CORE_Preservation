@@ -16,15 +16,15 @@ public class Main {
     public static Object zipFiles(String nameAddress) {
         try (ZipOutputStream zout = new ZipOutputStream(new FileOutputStream("C:/Games/savegames/zip.zip"));
              FileInputStream fis = new FileInputStream("C:/Games/savegames/save3.dat")) {
-            // создаем архивный объект и кладём его в архив
+            // Создаем архивный объект и кладём его в архив
             ZipEntry entre = new ZipEntry("save3.dat");
             zout.putNextEntry(entre);
-            // считываем содержимове файла в массив byte
+            // Считываем содержимове файла в массив byte
             byte[] buffer = new byte[fis.available()];
             fis.read(buffer);
-            // добавляем содержимое к архиву
+            // Добавляем содержимое к архиву
             zout.write(buffer);
-            // закрываем текущую запись для новой записи
+            // Закрываем текущую запись для новой записи
             zout.closeEntry();
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
